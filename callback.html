@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Connecting…</title></head>
+<body style="font-family:system-ui,sans-serif;background:#F4EFE6;color:#15172B;padding:32px">
+<p id="t">Connecting TikTok to your studio…</p>
+<script>
+// TikTok leitet hierher zurück; wir geben den Code an die Insel auf dem eigenen Laptop weiter (nie an fremde Server).
+var q = location.search;
+if (q.indexOf("code=") > -1) { location.replace("http://127.0.0.1:8200/tiktok/callback" + q); }
+else { document.getElementById("t").textContent = "No code received. Please try again from the dashboard."; }
+</script></body></html>
